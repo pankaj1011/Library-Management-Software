@@ -1,0 +1,38 @@
+<html>
+<body>
+<script>
+
+function eventhandler()
+{
+	if (this.readyState == 4 && this.status == 200) 
+	{
+		document.getElementById("txtHint").innerHTML = this.responseText;
+	}
+}
+function showhint(str,str1)
+{
+	if(str == "")
+	{
+		document.getElementById("txtHint").innerHTML = "";
+		return;
+	}
+	xmlhttp = new XMLHttpRequest();
+	xmlhttp.onreadystatechange = eventhandler;
+	xmlhttp.open("GET", "gethint.php?q=" + str + "&c=" + str1, true);
+	xmlhttp.send();
+}
+</script>
+<p> Type to search books </p>
+<form>
+	<input type = "text" name ="search" placeholder ="search" onkeyup="showhint(search.value,category.value)"> 
+	<select name = "category" >
+		<option selected value = "title">TITLE</option>
+		<option value = "author">AUTHOR</option>
+	</select>
+</form>
+<br />
+<br />
+
+<p>Suggestions: <span id="txtHint"></span></p>
+</body>
+</html>
