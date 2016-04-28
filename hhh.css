@@ -1,0 +1,22 @@
+body{font-size: 12pt;
+	font-family: "Book Antiqua";
+   color: black;
+   background: #cca9e7;
+
+   line-height: 16pt;
+   margin-left: 10pt;
+margin-right: 10pt;}
+p {margin-left: 24pt;
+	margin-right: 24pt;
+}
+h1{ font:24pt ProseAntique,Lucida Handwriting;
+	font-weight: bold;
+	line-height:30pt;
+}
+a{text-decoration:nonee;}
+a:link {color:white;}
+a:visited {color:red;}
+a:active{color:white;}
+div.footnote { font-size: 9pt;
+	line-height:12pt;
+	text-align:center}
